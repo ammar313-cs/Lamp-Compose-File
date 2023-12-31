@@ -20,7 +20,7 @@ RUN a2ensite projectlamp && a2dissite 000-default
 RUN sed -i 's/index.html index.cgi index.pl index.php index.xhtml index.htm/index.php index.html index.cgi index.pl index.xhtml index.htm/' /etc/apache2/mods-enabled/dir.conf
 
 # Reload Apache
-RUN service apache2 reload
+CMD service apache2 reload
 
 # Expose port 80
 EXPOSE 80
